@@ -13,23 +13,13 @@ Complete these steps in order to deploy SkillGraph to production.
 
 ## 🔄 What You Need to Do
 
-### Step 1: Push to GitHub (5 minutes)
+### Step 1: Push to GitHub ✅ DONE!
 
-**Create GitHub repo:**
-1. Go to https://github.com/new
-2. Name: `skillgraph`
-3. Click "Create repository"
+**Your repository:** https://github.com/jeeva893/task
 
-**Push code:**
-```powershell
-cd c:\Users\NEXOVA3\Downloads\task
+✅ Code successfully pushed to GitHub!
 
-git remote add origin https://github.com/YOUR-USERNAME/skillgraph.git
-git branch -M main
-git push -u origin main
-```
-
-**Verify:** Visit https://github.com/YOUR-USERNAME/skillgraph
+**View:** Visit https://github.com/jeeva893/task
 
 ---
 
@@ -139,12 +129,12 @@ git push
 
 ---
 
-## 📱 Your Live URLs (After Deployment)
+## 🎯 Your Live URLs
 
 ```
-Frontend: https://skillgraph.vercel.app
-Backend:  https://skillgraph-backend.onrender.com
-GitHub:   https://github.com/YOUR-USERNAME/skillgraph
+GitHub:   https://github.com/jeeva893/task ✅
+Frontend: https://skillgraph.vercel.app (deploying...)
+Backend:  https://skillgraph-backend.onrender.com (deploying...)
 ```
 
 ---
