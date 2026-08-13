@@ -5,11 +5,11 @@ const apiClient = axios.create({
     timeout: 10000,
 });
 export const api = {
-    health: () => apiClient.get('/health'),
-    listCandidates: (limit = 100) => apiClient.get('/candidates', { params: { limit } }),
-    getCandidate: (candidateId) => apiClient.get(`/candidates/${candidateId}`),
-    getCandidateSkills: (candidateId) => apiClient.get(`/candidates/${candidateId}/skills`),
-    getRecommendations: (candidateId, limit = 20) => apiClient.get(`/candidates/${candidateId}/recommendations`, { params: { limit } }),
-    getJob: (jobId) => apiClient.get(`/jobs/${jobId}`),
+    health: () => apiClient.get('health'),
+    listCandidates: (limit = 100) => apiClient.get('candidates', { params: { limit } }),
+    getCandidate: (candidateId) => apiClient.get(`candidates/${candidateId}`),
+    getCandidateSkills: (candidateId) => apiClient.get(`candidates/${candidateId}/skills`),
+    getRecommendations: (candidateId, limit = 20) => apiClient.get(`candidates/${candidateId}/recommendations`, { params: { limit } }),
+    getJob: (jobId) => apiClient.get(`jobs/${jobId}`),
 };
 export default apiClient;
