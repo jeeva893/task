@@ -80,14 +80,20 @@ export default function JobDetails({ jobId, onBack }: JobDetailsProps) {
         <>
           {successMessage && (
             <div style={{
-              background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(16, 185, 129, 0.05))',
-              border: '1px solid rgba(16, 185, 129, 0.3)',
-              borderRadius: '8px',
-              padding: '12px 16px',
-              marginBottom: '20px',
+              position: 'fixed',
+              top: '20px',
+              left: '50%',
+              transform: 'translateX(-50%)',
+              zIndex: 9999,
+              width: 'min(90vw, 560px)',
+              background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.12), rgba(16, 185, 129, 0.04))',
+              border: '1px solid rgba(16, 185, 129, 0.35)',
+              borderRadius: '10px',
+              padding: '12px 18px',
               color: 'var(--success)',
-              fontWeight: '500',
+              fontWeight: '600',
               fontSize: '14px',
+              boxShadow: '0 10px 25px rgba(16, 185, 129, 0.2)',
               animation: 'slideIn 0.3s ease-out'
             }}>
               {successMessage}

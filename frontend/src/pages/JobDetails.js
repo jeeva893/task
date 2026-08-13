@@ -38,14 +38,20 @@ export default function JobDetails({ jobId, onBack }) {
         setTimeout(() => setSuccessMessage(null), 3000);
     };
     return (_jsxs("div", { className: "container", children: [_jsx("button", { className: "btn btn-secondary", onClick: onBack, style: { marginBottom: '24px', display: 'flex', alignItems: 'center', gap: '8px' }, children: "\u2190 Back to Results" }), error && (_jsxs("div", { className: "error-state", children: [_jsx("h3", { children: "Error loading job details" }), _jsx("p", { children: error })] })), loading && (_jsxs("div", { className: "loading", children: [_jsx("div", { className: "spinner" }), _jsx("p", { style: { marginTop: '12px', color: 'var(--gray-600)' }, children: "Loading job details..." })] })), !loading && !job && !error && (_jsx("div", { className: "empty-state", children: _jsx("h2", { children: "\uD83D\uDD0D Job not found" }) })), !loading && job && (_jsxs(_Fragment, { children: [successMessage && (_jsx("div", { style: {
-                            background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(16, 185, 129, 0.05))',
-                            border: '1px solid rgba(16, 185, 129, 0.3)',
-                            borderRadius: '8px',
-                            padding: '12px 16px',
-                            marginBottom: '20px',
+                            position: 'fixed',
+                            top: '20px',
+                            left: '50%',
+                            transform: 'translateX(-50%)',
+                            zIndex: 9999,
+                            width: 'min(90vw, 560px)',
+                            background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.12), rgba(16, 185, 129, 0.04))',
+                            border: '1px solid rgba(16, 185, 129, 0.35)',
+                            borderRadius: '10px',
+                            padding: '12px 18px',
                             color: 'var(--success)',
-                            fontWeight: '500',
+                            fontWeight: '600',
                             fontSize: '14px',
+                            boxShadow: '0 10px 25px rgba(16, 185, 129, 0.2)',
                             animation: 'slideIn 0.3s ease-out'
                         }, children: successMessage })), _jsx("div", { className: "card", style: { marginBottom: '24px' }, children: _jsxs("div", { style: { display: 'flex', alignItems: 'start', justifyContent: 'space-between', gap: '20px' }, children: [_jsxs("div", { children: [_jsx("h1", { style: { fontSize: '28px', fontWeight: '700', marginBottom: '8px', color: 'var(--gray-900)' }, children: job.title }), job.company && (_jsxs(_Fragment, { children: [_jsx("h3", { style: { fontSize: '18px', fontWeight: '600', color: 'var(--primary-accent)', marginBottom: '4px' }, children: job.company.name }), _jsxs("div", { style: { display: 'flex', gap: '12px', alignItems: 'center', marginTop: '8px' }, children: [_jsx("span", { style: { color: 'var(--gray-600)', fontSize: '14px' }, children: "\uD83D\uDCCD Bangalore" }), _jsx("span", { style: { color: 'var(--gray-600)', fontSize: '14px' }, children: "\uD83D\uDCBC Full Time" }), job.company.industry && (_jsxs("span", { style: { color: 'var(--gray-600)', fontSize: '14px' }, children: ["\uD83C\uDFE2 ", job.company.industry] }))] })] }))] }), _jsxs("div", { style: {
                                         padding: '16px 24px',
