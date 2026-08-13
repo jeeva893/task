@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'https://skillgraph-backend-ias0.onrender.com/api';
+const API_BASE_URL = 'https://skillgraph-backend-ias0.onrender.com/';
 const apiClient = axios.create({
   baseURL: API_BASE_URL,
   timeout: 10000,
