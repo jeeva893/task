@@ -2,8 +2,9 @@
 
 > A full-stack application demonstrating the power of **graph databases** for intelligent job recommendations. Built with **CognoDB** (Neo4j-compatible), **FastAPI**, and **React**.
 
-**Live Demo**: https://task-4uqnd4dd9-sureshjeeva8610-4275s-projects.vercel.app/ | **GitHub**: https://github.com/jeeva893/task | **Backend API**: https://skillgraph-backend-ias0.onrender.com/api
+**Live Demo**: https://task-4uqnd4dd9-sureshjeeva8610-4275s-projects.vercel.app/ | **GitHub**: https://github.com/jeeva893/task | **Backend API**: https://skillgraph-backend-ias0.onrender.com/docs
 
+or use this : https://task-eight-silk-85.vercel.app/
 ---
 
 ## 📋 Table of Contents
@@ -450,35 +451,39 @@ LIMIT $limit
 
 ## Screenshots
 
+> Add the screenshots from the live app below once they are saved in the project. The sections below correspond to the actual UI flows shown in the deployed app.
+
 ### Dashboard - Candidate List
 
-Coming soon. Shows:
-- All candidates with name, title, experience
-- Search and sort functionality
-- Click to view profile
+![Dashboard screenshot](./screenshots/dashboard.png)
+
+- List of all candidates with name, title, and experience
+- Search box for filtering candidates
+- View profile button for each candidate
 
 ### Candidate Profile
 
-Coming soon. Shows:
-- Candidate details (name, title, experience)
-- Work history with companies and dates
-- Skills list with proficiency levels
+![Candidate profile screenshot](./screenshots/candidate-profile.png)
+
+- Candidate summary card with role and experience
+- Skill breakdown with proficiency levels
+- "Find Jobs" action to get recommendations
 
 ### Recommendations View
 
-Coming soon. Shows:
+![Recommendations screenshot](./screenshots/recommendations.png)
+
 - Jobs ranked by match percentage
-- Color-coded match indicators (red/yellow/green)
-- Matching and missing skills
-- Apply button with company info
+- Matching skills vs. missing skills
+- View Details button for each recommendation
 
 ### Job Details
 
-Coming soon. Shows:
-- Full job description
-- Required skills breakdown
-- Company information
-- Candidate match analysis
+![Job details screenshot](./screenshots/job-details.png)
+
+- Detailed job view with match score
+- Candidate skill alignment and gaps
+- Apply Now and Save Job actions
 
 ---
 
