@@ -2,7 +2,7 @@
 
 > A full-stack application demonstrating the power of **graph databases** for intelligent job recommendations. Built with **CognoDB** (Neo4j-compatible), **FastAPI**, and **React**.
 
-**Live Demo**: https://task-4uqnd4dd9-sureshjeeva8610-4275s-projects.vercel.app/ | **GitHub**: https://github.com/jeeva893/task | **Backend API**: https://skillgraph-backend-ias0.onrender.com/docs
+**Live Demo**:  https://task-eight-silk-85.vercel.app/ | **GitHub**: https://github.com/jeeva893/task | **Backend API**: https://skillgraph-backend-ias0.onrender.com/docs
 
 or use this : https://task-eight-silk-85.vercel.app/
 
