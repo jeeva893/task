@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Movie Graph Explorer</title>
+    <style>
+      body { font-family: system-ui, Arial; margin: 24px; }
+      input, button { padding: 8px; font-size: 14px; }
+      .card { border: 1px solid #ddd; padding: 12px; margin: 8px 0; border-radius: 6px; }
+    </style>
+  </head>
+  <body>
+    <h1>Movie Graph Explorer</h1>
+    <section class="card">
+      <h3>Search</h3>
+      <input id="q" placeholder="search people or movies" />
+      <button id="search">Search</button>
+      <ul id="results"></ul>
+    </section>
+
+    <section class="card">
+      <h3>Actor's Movies</h3>
+      <input id="actor" placeholder="actor name (e.g. Alice)" />
+      <button id="actorSearch">Get movies</button>
+      <ul id="actorMovies"></ul>
+    </section>
+
+    <section class="card">
+      <h3>Recommendations</h3>
+      <input id="person" placeholder="person name (e.g. Alice)" />
+      <button id="reco">Recommend</button>
+      <ul id="recoList"></ul>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>

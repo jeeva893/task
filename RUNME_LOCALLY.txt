@@ -1,0 +1,115 @@
+# SkillGraph Complete Local Setup Guide
+# Run these commands in Windows PowerShell from the project root
+
+## STEP 1: SETUP BACKEND (Run in PowerShell)
+
+cd backend
+
+# Create and activate virtual environment
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+
+# Install Python dependencies
+pip install -r requirements.txt
+
+# Seed the database (⚠️ WILL CLEAR EXISTING DATA)
+python backend\scripts\seed.py
+
+# Run tests
+pytest -v backend\tests\
+
+# Start the backend server
+# (Keep this running in this terminal)
+uvicorn backend.app.main:app --reload
+# Backend will be at http://localhost:8000
+# API docs at http://localhost:8000/docs
+
+---
+
+## STEP 2: SETUP FRONTEND (Run in NEW PowerShell terminal)
+
+cd frontend
+
+# Install Node dependencies
+npm install
+
+# Copy environment config
+cp .env.example .env
+
+# Start frontend dev server
+# (Keep this running in this terminal)
+npm run dev
+# Frontend will be at http://localhost:5173
+
+---
+
+## STEP 3: TEST THE APPLICATION
+
+1. Open http://localhost:5173 in browser
+2. Dashboard should show candidates
+3. Click a candidate to view profile
+4. Click "Find Jobs" to see recommendations
+5. Click a job to see details
+6. Verify loading/empty/error states work
+
+---
+
+## VERIFICATION CHECKLIST
+
+✓ backend/.env is configured with CognoDB credentials
+✓ Backend virtual environment created (.venv/)
+✓ Dependencies installed (pip install -r requirements.txt)
+✓ Seed script ran successfully (no errors)
+✓ Tests pass (pytest -v)
+✓ Backend server running (http://localhost:8000/health shows ok)
+✓ Frontend dependencies installed (npm install completed)
+✓ Frontend dev server running (http://localhost:5173 loads)
+✓ Can select candidate and view recommendations
+✓ All pages working (Dashboard → Profile → Recommendations → Job Details)
+
+---
+
+## If You Get Errors
+
+Backend errors:
+- "ModuleNotFoundError: No module named 'neo4j'"
+  → Activate venv: .venv\Scripts\Activate.ps1
+  → Run: pip install -r requirements.txt
+
+- "Cannot connect to CognoDB"
+  → Check backend\.env has correct URI and password
+  → Verify CognoDB instance is running in console.cognodb.com
+
+Frontend errors:
+- "Cannot reach backend"
+  → Verify backend is running on http://localhost:8000
+  → Check frontend\.env has VITE_API_URL=http://localhost:8000/api
+  → Check browser console for CORS errors
+
+---
+
+## NEXT STEPS AFTER EVERYTHING WORKS
+
+1. Take screenshots of all pages
+2. Record a 2-minute demo video
+3. Build frontend for production: npm run build
+4. Deploy backend to Railway: https://railway.app
+5. Deploy frontend to Vercel: https://vercel.com
+6. Create GitHub repository and push code
+7. Email submission to hr@wexa.ai with links
+
+---
+
+## Important Files
+
+- Backend config: backend/app/config.py
+- Database queries: backend/app/queries.py
+- Seed data: backend/scripts/seed.py
+- API endpoints: backend/app/routes.py
+- Frontend pages: frontend/src/pages/
+- Styles: frontend/src/styles.css
+
+---
+
+Your backend/.env is ready with your CognoDB credentials.
+You're all set to run locally! 🚀

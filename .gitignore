@@ -1,0 +1,35 @@
+# Environment variables (NEVER commit credentials)
+.env
+backend/.env
+frontend/.env
+
+# Python
+backend/.venv/
+backend/__pycache__/
+backend/*.pyc
+backend/.pytest_cache/
+backend/.coverage
+.venv/
+__pycache__/
+
+# Node
+node_modules/
+frontend/dist/
+frontend/.cache/
+dist/
+
+# Logs
+*.log
+logs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Build
+build/
+.egg-info/
