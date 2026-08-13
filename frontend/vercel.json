@@ -1,9 +1,0 @@
-{
-  "buildCommand": "tsc -b && vite build",
-  "installCommand": "npm install",
-  "outputDirectory": "dist",
-  "framework": "vite",
-  "env": {
-    "VITE_API_URL": "@vite_api_url"
-  }
-}
