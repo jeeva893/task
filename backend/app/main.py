@@ -9,11 +9,12 @@ app = FastAPI(title='SkillGraph API')
 
 app.add_middleware(
     CORSMiddleware,
+    allow_origin_regex=r'https://.*\.vercel\.app',
     allow_origins=[
-        'http://localhost:5173',      # Local dev frontend
-        'http://localhost:3000',       # Alternative local dev
-        'https://skillgraph.vercel.app',  # Production frontend
-        'https://*.vercel.app',        # Any Vercel deployment
+        'http://localhost:5173',
+        'http://localhost:3000',
+        'https://skillgraph.vercel.app',
+        'https://task-iax81kxp2-sureshjeeva8610-4275s-projects.vercel.app',
     ],
     allow_credentials=True,
     allow_methods=['*'],
