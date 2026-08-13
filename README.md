@@ -2,7 +2,7 @@
 
 > A full-stack application demonstrating the power of **graph databases** for intelligent job recommendations. Built with **CognoDB** (Neo4j-compatible), **FastAPI**, and **React**.
 
-**Live Demo**: https://skillgraph.vercel.app | **GitHub**: https://github.com/jeeva893/task | **Backend API**: https://skillgraph-backend.onrender.com/api
+**Live Demo**: https://task-4uqnd4dd9-sureshjeeva8610-4275s-projects.vercel.app/ | **GitHub**: https://github.com/jeeva893/task | **Backend API**: https://skillgraph-backend-ias0.onrender.com/api
 
 ---
 
@@ -614,7 +614,7 @@ Coming soon. Shows:
 
 4. **Deploy** - Vercel auto-deploys on git push
 
-5. **Note the frontend URL**: `https://skillgraph.vercel.app`
+5. **Note the frontend URL**: `https://task-4uqnd4dd9-sureshjeeva8610-4275s-projects.vercel.app/`
 
 ### Update CORS for Production
 
@@ -625,7 +625,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         'http://localhost:5173',  # Local dev
-        'https://skillgraph.vercel.app'  # Production frontend
+        'https://task-4uqnd4dd9-sureshjeeva8610-4275s-projects.vercel.app/'  # Production frontend
     ],
     allow_credentials=True,
     allow_methods=['*'],
