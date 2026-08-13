@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: skillgraph-backend
+    env: python
+    plan: free
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: uvicorn backend.app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: COGNODB_URI
+        scope: build,runtime
+      - key: COGNODB_USERNAME
+        value: cognodb
+      - key: COGNODB_PASSWORD
+        scope: build,runtime
